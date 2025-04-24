@@ -1,0 +1,127 @@
+<!doctype html><html lang="zh"><head><title>Goto-Mars 银河系漫游指北</title><meta name="description" content="Goto-mars火星首页为用户提供一个清爽干净的上网入口。我们的理念是简约、个性、极致。给上网用户提供最舒适的上网体验。"><meta name="keyword" content="Gotomars,Goto-mars,mars,火星首页,火星个人导航,上网导航,火星收藏夹，云端收藏夹,网址大全,简约导航网站,无广告导航网站,导航123,自定义网址导航,网站导航"><link rel="shortcut icon" href="/favicon.ico"><meta charset="utf-8"><link href="/src/app.9daf10a7f352c754adf0.css" rel="stylesheet"></head><script>! function (e) {
+    function t(a) {
+      if (i[a]) return i[a].exports;
+      var n = i[a] = {
+        exports: {},
+        id: a,
+        loaded: !1
+      };
+      return e[a].call(n.exports, n, n.exports, t), n.loaded = !0, n.exports
+    }
+    var i = {};
+    return t.m = e, t.c = i, t.p = "", t(0)
+  }([function (e, t) {
+    "use strict";
+    Object.defineProperty(t, "__esModule", {
+      value: !0
+    });
+    var i = window;
+    t["default"] = i.flex = function (e, t) {
+      var a = e || 100,
+        n = t || 1,
+        r = i.document,
+        o = navigator.userAgent,
+        d = o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i),
+        l = o.match(/U3\/((\d+|\.){5,})/i),
+        c = l && parseInt(l[1].split(".").join(""), 10) >= 80,
+        p = navigator.appVersion.match(/(iphone|ipad|ipod)/gi),
+        s = 1; //i.devicePixelRatio || 1;
+      p || d && d[1] > 534 || c || (s = 1);
+      var u = 1 / s,
+        m = r.querySelector('meta[name="viewport"]');
+      m || (m = r.createElement("meta"), m.setAttribute("name", "viewport"), r.head.appendChild(m)), m.setAttribute("content", "width=device-width,user-scalable=no,initial-scale=1,maximum-scale=" + u + ",minimum-scale=" + u), r.documentElement.style.fontSize = a / 2 * s * n + "px"
+    }, e.exports = t["default"]
+  }]);
+  flex(100, 1);
+  window.onresize = function () {
+    flex(100, 1);
+  }</script><script src="https://s13.cnzz.com/z_stat.php?id=1274797031&web_id=1274797031" language="JavaScript"></script><body><div id="root"></div><script>if (!Array.prototype.findIndex) {
+      Object.defineProperty(Array.prototype, "findIndex", {
+        value: function (predicate) {
+          if (this === null) {
+            throw new TypeError('Array.prototype.find called on null or undefined');
+          }
+          if (typeof predicate !== 'function') {
+            throw new TypeError('predicate must be a function');
+          }
+          var list = Object(this);
+          var length = list.length >>> 0;
+          var thisArg = arguments[1];
+          var value;
+
+          for (var i = 0; i < length; i++) {
+            value = list[i];
+            if (predicate.call(thisArg, value, i, list)) {
+              return value;
+            }
+          }
+          return undefined;
+        }
+      });
+    }
+    if (!Array.prototype.fill) {
+      Object.defineProperty(Array.prototype, 'fill', {
+        value: function (value) {
+          if (this == null) {
+            throw new TypeError('this is null or not defined');
+          }
+          var O = Object(this);
+          var len = O.length >>> 0;
+          var start = arguments[1];
+          var relativeStart = start >> 0;
+          var k = relativeStart < 0 ?
+            Math.max(len + relativeStart, 0) :
+            Math.min(relativeStart, len);
+          var end = arguments[2];
+          var relativeEnd = end === undefined ?
+            len : end >> 0;
+          var final = relativeEnd < 0 ?
+            Math.max(len + relativeEnd, 0) :
+            Math.min(relativeEnd, len);
+          while (k < final) {
+            O[k] = value;
+            k++;
+          }
+          return O;
+        }
+      });
+    }
+    Object.defineProperty(Array.prototype, 'has', {
+      value: function (value) {
+        var _list = Object(this);
+        var _length = _list.length >>> 0;
+        for (var i = 0; i < _length; i++) {
+          if (_list[i] == value) return i
+        }
+        return -1
+      }
+    });
+    Date.prototype.format = function (format) {
+      if (!format) format = 'yyyy-MM-dd';
+      var o = {
+        'M+': this.getMonth() + 1,
+        'd+': this.getDate(),
+        'h+': this.getHours(),
+        'm+': this.getMinutes(),
+        's+': this.getSeconds(),
+        'q+': Math.floor((this.getMonth() + 3) / 3),
+        'S': this.getMilliseconds()
+      };
+      if (/(y+)/.test(format)) format = format.replace(RegExp.$1, (this.getFullYear() + '').substr(4 - RegExp.$1.length));
+      for (var k in o) {
+        if (new RegExp('(' + k + ')').test(format)) format = format.replace(RegExp.$1, (RegExp.$1.length === 1) ? (o[k]) : (('00' + o[k]).substr(('' + o[k]).length)))
+      }
+      return format
+    };
+    Date.prototype.getRoughTime = function () {
+      return Math.ceil(this.getTime() / 1000)
+    };
+    Date.prototype.getDayTime = function () {
+      return Math.ceil(new Date(this.format()).getTime() / 1000)
+    };
+    Date.nowTime = function () {
+      return Math.ceil(Date.now() / 1000)
+    };
+    Date.todayTime = function () {
+      return Math.ceil(new Date(new Date().format()).getTime() / 1000)
+    }</script><script type="text/javascript" src="/lib_516e49231202d2e735b0.js"></script><script type="text/javascript" src="/src/app.9daf10a7f352c754adf0.js"></script></body></html>
