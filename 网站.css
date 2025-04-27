@@ -212,7 +212,7 @@ body>a {
 .ant-message-info .anticon,
 .ant-message-loading .anticon {
     background-repeat: no-repeat;
-    background-image: url(/assets/images/loading111.gif);
+    background-image: url(./assets/images/loading111.gif);
     background-position: 50%;
     background-size: contain;
     color: transparent;
@@ -222,7 +222,7 @@ body>a {
 div.auth-form .bg_img {
     box-sizing: border-box;
     height: 100vh;
-    background: url(/assets/images/reg-bg.png) no-repeat 50%;
+    background: url(./assets/images/reg-bg.png) no-repeat 50%;
     background-size: auto 110vh;
     position: relative
 }
@@ -5962,12 +5962,12 @@ ul {
 }
 
 .page.gray #header .logo {
-    background: #333
+    background: #fff
 }
 
 .page.gray #header .logo .logo-img {
-    background: url(/assets/images/logotupian30_03.png) no-repeat 50%;
-    background-size: 3.52rem 0.84rem
+    background: url(./assets/images/0992e2359e132707e4b61812d8066c25_2052201000163681033.png) no-repeat 100%;
+    background-size: 2.5rem 1.5rem
 }
 
 #header {
@@ -5988,7 +5988,7 @@ ul {
 #header .logo .logo-img {
     width: 100%;
     height: 100%;
-    background: url(/assets/images/logotupian_whitebg_03.png) no-repeat 50%;
+    background: url(./assets/images/0992e2359e132707e4b61812d8066c25_2052201000163681033.png) no-repeat 50%;
     background-size: 3.52rem 0.84rem
 }
 
@@ -6026,14 +6026,14 @@ ul {
 }
 
 #header .fankui:hover .fankuiicon {
-    background: url(/assets/images/kongjian_05.png) no-repeat 50%;
+    background: url(./assets/images/kongjian_05.png) no-repeat 50%;
     background-size: contain
 }
 
 #header .fankuiicon {
     height: 0.72rem;
     width: 0.72rem;
-    background: url(/assets/images/kongjian_03.png) no-repeat 50%;
+    background: url(./assets/images/kongjian_03.png) no-repeat 50%;
     background-size: contain
 }
 
@@ -6059,7 +6059,7 @@ ul {
 #header .feiji {
     height: 0.72rem;
     width: 0.72rem;
-    background: url(/assets/images/kongjian_03.png) no-repeat 50%;
+    background: url(./assets/images/kongjian_03.png) no-repeat 50%;
     background-size: 0.6rem 0.6rem;
     position: relative;
     float: left;
@@ -6069,7 +6069,7 @@ ul {
 #header .feiji.active,
 #header .feiji:hover {
     cursor: pointer;
-    background-image: url(/assets/images/kongjian_05.png)
+    background-image: url(./assets/images/kongjian_05.png)
 }
 
 #header .feiji .feiji_link {
@@ -6108,7 +6108,7 @@ ul {
 }
 
 #header .denglu:hover .dengluicon {
-    background: url(/assets/images/kongjian_15.png) no-repeat 50%;
+    background: url(./assets/images/kongjian_15.png) no-repeat 50%;
     background-size: contain
 }
 
@@ -6116,7 +6116,7 @@ ul {
     display: inline-block;
     width: 0.72rem;
     height: 0.72rem;
-    background: url(/assets/images/kongjian_13.png) no-repeat 50%;
+    background: url(./assets/images/kongjian_13.png) no-repeat 50%;
     background-size: contain
 }
 
@@ -6131,7 +6131,7 @@ ul {
 }
 
 #header .chilun:hover .chilunicon {
-    background: url(/assets/images/kongjian_11.png) no-repeat 50%;
+    background: url(./assets/images/kongjian_11.png) no-repeat 50%;
     background-size: contain
 }
 
@@ -6143,7 +6143,7 @@ ul {
     display: inline-block;
     width: 0.72rem;
     height: 0.72rem;
-    background: url(/assets/images/kongjian_07.png) no-repeat 50%;
+    background: url(./assets/images/kongjian_07.png) no-repeat 50%;
     background-size: cover
 }
 
@@ -8002,13 +8002,13 @@ ul {
 
 #bookmark-load .llqmenu {
     height: 1.2rem;
-    background: url(/assets/images/llqmenu.png) no-repeat -0.9rem -0.7rem;
+    background: url(./assets/images/llqmenu.png) no-repeat -0.9rem -0.7rem;
     margin: 0 0.9rem
 }
 
 #bookmark-load .active {
     display: block;
-    background: url(/assets/images/llqmenu.png) no-repeat
+    background: url(./assets/images/llqmenu.png) no-repeat
 }
 
 #bookmark-load .llqbox {
@@ -8392,7 +8392,7 @@ ul {
     line-height: 0.36rem;
     height: 0.48rem;
     padding: 0.06rem 0.24rem 0.06rem 0.72rem;
-    background: url(/assets/images/wen-jian-jia_01.png) no-repeat;
+    background: url(./assets/images/wen-jian-jia_01.png) no-repeat;
     background-position: 0 -0.48rem;
     background-size: 0.96rem 1.44rem
 }
@@ -8744,7 +8744,7 @@ ul {
     border-bottom: 0.04rem solid #333;
     border-top-right-radius: 0.16rem;
     border-bottom-right-radius: 0.16rem;
-    background-image: url(/assets/images/sousuofangdajing_03.png);
+    background-image: url(./assets/images/sousuofangdajing_03.png);
     background-size: 0.48rem 0.48rem;
     cursor: pointer
 }
