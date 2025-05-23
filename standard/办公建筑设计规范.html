@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>办公建筑设计规范在线浏览</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+        }
+        .highlight {
+            background-color: rgba(99, 102, 241, 0.1);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+        }
+        .chapter-title {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .chapter-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            height: 1.5rem;
+            width: 4px;
+            background-color: #4f46e5;
+            border-radius: 2px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f5f9;
+            font-weight: 600;
+        }
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        .nav-link {
+            transition: all 0.2s ease;
+        }
+        .nav-link:hover {
+            color: #4f46e5;
+            transform: translateX(4px);
+        }
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .mobile-menu.active {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 导航栏 -->
+        <nav class="glassmorphism sticky top-0 z-50 p-4 mb-8">
+            <div class="flex items-center justify-between">
+                <div class="text-xl font-bold text-indigo-600">
+                    <i class="fas fa-building mr-2"></i>办公建筑设计规范 JGJ67-2006
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#header" class="nav-link">公告</a>
+                    <a href="#chapter1" class="nav-link">第一章 总则</a>
+                    <a href="#chapter2" class="nav-link">第二章 基地和总平面</a>
+                    <a href="#chapter3" class="nav-link">第三章 建筑设计</a>
+                    <a href="#chapter4" class="nav-link">第四章 建筑设备</a>
+                    <a href="#appendix" class="nav-link">附录</a>
+                </div>
+                <button class="md:hidden text-gray-600 focus:outline-none" id="mobileMenuButton">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- 移动端菜单 -->
+            <div class="mobile-menu mt-2" id="mobileMenu">
+                <div class="flex flex-col space-y-2 p-2">
+                    <a href="#header" class="nav-link px-4 py-2 rounded-lg hover:bg-indigo-50">公告</a>
+                    <a href="#chapter1" class="nav-link px-4 py-2 rounded-lg hover:bg-indigo-50">第一章 总则</a>
+                    <a href="#chapter2" class="nav-link px-4 py-2 rounded-lg hover:bg-indigo-50">第二章 基地和总平面</a>
+                    <a href="#chapter3" class="nav-link px-4 py-2 rounded-lg hover:bg-indigo-50">第三章 建筑设计</a>
+                    <a href="#chapter4" class="nav-link px-4 py-2 rounded-lg hover:bg-indigo-50">第四章 建筑设备</a>
+                    <a href="#appendix" class="nav-link px-4 py-2 rounded-lg hover:bg-indigo-50">附录</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 内容区域 -->
+        <div class="glassmorphism p-6 md:p-8 mb-8">
+            <!-- 公告部分 -->
+            <section id="header" class="mb-12">
+                <h1 class="text-3xl font-bold mb-6 text-center text-indigo-700">办公建筑设计规范 JGJ67-2006</h1>
+                <div class="bg-indigo-50 p-6 rounded-lg mb-6">
+                    <h2 class="text-xl font-semibold mb-4">建设部关于发布行业标准《办公建筑设计规范》的公告</h2>
+                    <p class="mb-4">中华人民共和国建设部公告第510号</p>
+                    <p class="mb-4">现批准《办公建筑设计规范》为行业标准，编号为JGJ67-2006，自2007年5月1日起实施。其中，第4.5.8、4.5.13、5.0.2条为强制性条文，必须严格执行。原行业标准《办公建筑设计规范》JGJ67-89同时废止。</p>
+                    <p class="mb-4">本规范由建设部标准定额研究所组织中国建筑工业出版社出版发行。</p>
+                    <p>中华人民共和国建设部 二〇〇六年十一月二十九日</p>
+                </div>
+            </section>
+
+            <!-- 第一章 总则 -->
+            <section id="chapter1" class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 chapter-title">第一章 总则</h2>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">第1.0.1条</h3>
+                        <p>为保证办公建筑设计在适用、安全、卫生等方面的基本要求，特制定本规范。</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">第1.0.2条</h3>
+                        <p>本规范适用于全国城镇的机关、团体、企事业单位的新建、改建、扩建的办公建筑设计。其它建筑中的办公用房部分可参照本规范执行。</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">第1.0.3条</h3>
+                        <p>办公建筑按高度划分应符合以下规定：</p>
+                        <ol class="list-decimal pl-6 mt-2 space-y-1">
+                            <li>建筑高度24m以下为低层或多层办公建筑；</li>
+                            <li>建筑高度超过24m而未超过100m为高层办公建筑；</li>
+                            <li>建筑高度超过100m为超高层办公建筑。</li>
+                        </ol>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-semibold mb-2">第1.0.4条</h3>
+                        <p>办公建筑设计除按本规范执行外，尚应符合现行《民用建筑设计通则》以及国家和专业部门颁布的有关设计标准、规范和规定。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第二章 基地和总平面 -->
+            <section id="chapter2" class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 chapter-title">第二章 基地和总平面</h2>
+                
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">第一节 基地</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第2.1.1条</h4>
+                                <p>办公建筑的基地应选在交通和通讯方便的地段，并应避开产生粉尘、煤烟、散发有害物质的场所和贮存有易爆、易燃品等地段。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第2.1.2条</h4>
+                                <p>位于城市的办公建筑的基地，应符合城市规划布局的要求，并应选在市政设施比较完善的地段。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第2.1.3条</h4>
+                                <p>工业企业的办公建筑，可在企业基地内选择联系方便，污染影响最小的地段建造，并应符合安全、卫生和环境保护等法规的有关规定。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">第二节 总平面</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第2.2.1条</h4>
+                                <p>总平面布置宜进行环境及绿化设计。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第2.2.2条</h4>
+                                <p>在同一基地内办公楼与其它建筑共建，或建造以办公用房为主的综合性建筑，应根据使用功能不同，做到分区明确、布局合理、互不干扰。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第2.2.3条</h4>
+                                <p>建筑基地内应设机动车和自行车停车场(库)。条件不允许时，可由有关部门就近统筹建设停车空间。停车场地面积由当地规划部门确定。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第2.2.4条</h4>
+                                <p>总平面布置应合理安排好设备机房、附属设施和地下建筑物。如设有锅炉房、食堂的宜设运送燃料、货物和清除垃圾等的单独出入口。采用原煤作燃料的锅炉房，应留有堆放场地。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第三章 建筑设计 -->
+            <section id="chapter3" class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 chapter-title">第三章 建筑设计</h2>
+                
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">第一节 一般规定</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.1.1条</h4>
+                                <p>办公建筑应根据使用性质、建设规模与标准的不同，确定各类用房。一般由办公用房、公共用房、服务用房等组成。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.1.2条</h4>
+                                <p>办公建筑应根据使用要求，结合基地面积、结构选型等情况按建筑模数选择开间和进深，合理确定建筑平面，并为今后改造和灵活分隔创造条件。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.1.3条</h4>
+                                <p>六层及六层以上办公建筑应设电梯。建筑高度超过75m的办公建筑电梯应分区或分层使用。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.1.4条</h4>
+                                <p>窗</p>
+                                <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                    <li>底层及半地下室外窗宜采取防范措施。</li>
+                                    <li>高层办公建筑采用大面积玻璃窗或玻璃幕墙时应设擦窗设施。</li>
+                                    <li>设采暖空调的办公建筑，外窗面积在满足采光要求的前提下，应尽量减少；空调办公建筑外窗应有良好的密闭性和隔热性，全空调办公建筑外窗应设部分可开启窗扇。</li>
+                                </ol>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.1.5条</h4>
+                                <p>门</p>
+                                <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                    <li>办公室门洞口宽度不应小于1m，高度不应小于2m。</li>
+                                    <li>机要办公室、财务办公室、重要档案库和贵重仪表间的门应采取防盗措施，室内宜设防盗报警装置。</li>
+                                </ol>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.1.6条</h4>
+                                <p>门厅</p>
+                                <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                    <li>门厅一般可设传达室、收发室、会客室。根据使用需要也可设门廊、警卫室、衣帽间和电话间等。</li>
+                                    <li>门厅应与楼梯、过厅、电梯厅邻近。</li>
+                                    <li>严寒和寒冷地区的门厅，应设门斗或其它防寒设施。</li>
+                                </ol>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.1.7条</h4>
+                                <p>走道</p>
+                                <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                    <li>走道最小净宽不应小于表3.1.7的规定。</li>
+                                </ol>
+                                
+                                <div class="mt-4 overflow-x-auto">
+                                    <table>
+                                        <caption class="text-left font-medium mb-2">表3.1.7 走道最小净宽</caption>
+                                        <thead>
+                                            <tr>
+                                                <th>走道长度(m)</th>
+                                                <th>走道净宽(m)</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="2">单面布房</td>
+                                                <td>≤40</td>
+                                                <td>1.30</td>
+                                            </tr>
+                                            <tr>
+                                                <td>40</td>
+                                                <td>1.50</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="2">双面布房</td>
+                                                <td>≤40</td>
+                                                <td>1.40</td>
+                                            </tr>
+                                            <tr>
+                                                <td>40</td>
+                                                <td>1.80</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <p class="mt-2 text-sm text-gray-600">注:内筒结构的回廊式走道净宽最小值同单面布房走道。</p>
+                                
+                                <ol class="list-decimal pl-6 mt-2 space-y-1" start="2">
+                                    <li>走道地面有高差时，当高差不足二级踏步时，不得设置台阶，应设坡道，其坡度不宜大于1∶8。</li>
+                                </ol>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.1.8条</h4>
+                                <p>采光</p>
+                                <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                    <li>办公室、研究工作室、接待室、打字室、陈列室和复印机室等房间窗地比不应小于1∶6。</li>
+                                    <li>设计绘图室、阅览室等房间窗地比不应小于1∶5。</li>
+                                </ol>
+                                <p class="mt-2 text-sm text-gray-600">注:窗地比为该房间侧窗洞口面积与该房间地面面积之比。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.1.9条</h4>
+                                <p>隔声</p>
+                                <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                    <li>办公用房、会议室、接待室等允许噪声级不应大于55dB(A声级)，电话总机房、计算机房、打字室、图书阅览室等允许噪声级不应大于50dB(A声级)。</li>
+                                    <li>电梯井道及产生噪声的设备机房，不宜与办公用房、会议室贴邻，否则应采取消声、隔声、减振等措施。</li>
+                                </ol>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.1.10条</h4>
+                                <p>超高层办公建筑的避难层(区)、屋顶直升飞机停机坪等的设置应执行国家和专业部门的有关规定。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.1.11条</h4>
+                                <p>办公室的室内净高不得低于2.60m，设空调的可不低于2.40m；走道净高不得低于2.10m，贮藏间净高不得低于2.00m。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 第二节 办公用房 -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">第二节 办公用房</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.2.1条</h4>
+                                <p>办公用房包括普通办公室和专用办公室。专用办公室包括设计绘图室与研究工作室等。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.2.2条</h4>
+                                <p>办公用房宜有色好的朝向和自然通风，并不宜布置在地下室。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.2.3条</h4>
+                                <p>普通办公室。</p>
+                                <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                    <li>普通办公室宜设计成单间式和大空间式，特殊需要可设计成单元式或公寓式。</li>
+                                    <li>大空间式办公室在布置吊顶上的通风口、照明、防火设施等时，应尽可能为自行分隔或装修创造条件，有条件的工程宜设计成模块式吊顶。</li>
+                                    <li>机要部门办公室应相对集中，与其它部门宜适当分隔。</li>
+                                    <li>值班办公室可根据使用需要设置，重要办公建筑设有夜间总值班室时，可设置专用卫生间。</li>
+                                    <li>普通办公室每人使用面积不应小于3㎡，单间办公室净面积不宜小于10㎡。</li>
+                                </ol>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.2.4条</h4>
+                                <p>专用办公室</p>
+                                <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                    <li>设计绘图室宜采用大房间或大空间，或用灵活隔断、家具等把大空间进行分隔；研究工作室(不含实验室)宜采用单间式，自然科学研究工作室宜靠近相关的实验室。</li>
+                                    <li>应避免西晒和眩光。</li>
+                                    <li>应利用室内空间或隔墙设置橱柜。</li>
+                                    <li>设计绘图室，每人使用面积不应小于5㎡。研究工作室，每人使用面积不应小于4㎡。</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 第三节 公共用房 -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">第三节 公共用房</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.3.1条</h4>
+                                <p>公共用房一般包括会议室、接待室、陈列室、厕所、开水间等。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.3.2条</h4>
+                                <p>会议室</p>
+                                <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                    <li>会议室根据需要可分设大、中、小会议室。</li>
+                                    <li>中、小会议室可分散布置。小会议室使用面积宜为30㎡左右，中会议室使用面积宜为60㎡左右；中、小会议室每人使用面积：有会议桌的不应小于1.80㎡，无会议桌的不应小于0.80㎡。</li>
+                                    <li>大会议室应根据使用人数和桌椅设置情况确定使用面积。会议厅所在层数和安全出口的设置等应符合防火规范的要求，并应根据语言清晰度要求进行设计。</li>
+                                    <li>作多功能使用的会议室(厅)宜有电声、放映、遮光等设施。有电话、电视会议要求的会议室，应有隔声、吸音和遮光措施。</li>
+                                </ol>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.3.3条</h4>
+                                <p>接待室</p>
+                                <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                    <li>接待室根据使用要求设置，专用接待室应靠近使用部门，行政办公建筑的群众来访接待室宜靠近主要出入口。</li>
+                                    <li>高级接待室可设置专用茶具间、卫生间和贮藏间等。</li>
+                                </ol>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.3.4条</h4>
+                                <p>陈列室</p>
+                                <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                    <li>陈列室应根据需要和使用要求设置，专用陈列室应对陈列效果进行照明设计，避免阳光直射及眩光，外窗宜设避光设施。</li>
+                                    <li>可利用会议室、接待室、走道、过厅等的部分面积或墙面兼作陈列空间。</li>
+                                </ol>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.3.5条</h4>
+                                <p>厕所</p>
+                                <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                    <li>厕所距离最远的工作点不应大于50m。</li>
+                                    <li>厕所应设前室，前室内宜设置洗手盆。</li>
+                                    <li>厕所应有天然采光和不向邻室对流的直接自然通风，条件不许可时，应设机械排风装置。</li>
+                                    <li>卫生洁具数量应符合下列规定：
+                                        <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                            <li>男厕所每40人设大便器一具，每30人设小便器一具(小便槽按每0.60m长度相当一具小便器计算)；</li>
+                                            <li>女厕所每20人设大便器一具；</li>
+                                            <li>洗手盆每40人设一具。</li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                                <p class="mt-2 text-sm text-gray-600">注:①每间厕所大便器三具以上者，其中一具宜设坐式大便器。②设有大会议室的楼层应相应增加厕位。③专用卫生间可只设坐式大便器、洗手盆和面镜。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.3.6条</h4>
+                                <p>开水间</p>
+                                <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                    <li>应根据办公建筑层数和当地饮水习惯集中或分层设置开水间或饮用水供应点。</li>
+                                    <li>开水间宜直接采光和通风，条件不许可时应设机械排风装置。</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 第四节 服务用房 -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">第四节 服务用房</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.4.1条</h4>
+                                <p>服务用房包括一般性服务用房和技术性服务用房。一般性服务用房为：打字室、档案室、资料室、图书阅览室、贮藏间、汽车停车库、自行车停车库、卫生管理设施间等；技术性服务用房为：电话总机房、计算机房、电传室、复印室、晒图室、设备机房等。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.4.2条</h4>
+                                <p>打字室</p>
+                                <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                    <li>人员多的打字室可分设收发校样间、打字间、油印间、装订间等。</li>
+                                    <li>打字间应光线充足，通风良好、避免西晒。</li>
+                                    <li>设多台打字机的打字间宜考虑隔声措施。</li>
+                                </ol>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.4.3条</h4>
+                                <p>档案室、资料室、图书阅览室。</p>
+                                <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                    <li>可根据规模大小和工作需要分设若干不同用途的房间(如库房、管理间、查阅间或阅览间)。</li>
+                                    <li>档案、资料库和书库应采取防火、防潮、防尘、防蛀、防紫外线等措施。地面应用不起尘、易清洁的面层，并设机械排风装置。</li>
+                                    <li>档案、资料查阅间和图书阅览室应光线充足、通风良好、避免阳光直射及眩光。</li>
+                                </ol>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.4.4条</h4>
+                                <p>汽车停车库</p>
+                                <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                    <li>汽车停车库的设计应符合现行的《汽车库设计防火规范》的规定。</li>
+                                    <li>小汽车每辆停放面积应根据车型、建筑平面、结构型式与停车方式确定，一般为25~30㎡(含停车库内汽车进出通道)。</li>
+                                    <li>地下汽车停车库应符合下列要求：
+                                        <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                            <li>应设置排气通风装置。</li>
+                                            <li>应设封闭楼梯间通至地面层，并不与上层楼梯间连通。</li>
+                                            <li>设有三台以上电梯的办公建筑，宜将一台电梯通至地下汽车停车库；该电梯于停车库内应设前室，前室门应采用乙级防火门或防火卷帘门。</li>
+                                        </ol>
+                                    </li>
+                                    <li>停放车辆超过25辆的汽车停车库宜设置驾驶员休息室，休息室应靠近安全出口处。</li>
+                                </ol>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.4.5条</h4>
+                                <p>自行车停车库</p>
+                                <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                    <li>净高不得低于2m</li>
+                                    <li>设在地下室、半地下室或楼层内的自行车库，自行车推行坡道宽度不宜小于1.80m坡长不宜超过6.00m。坡度不宜大于1∶5。</li>
+                                    <li>自行车每辆停放面积一般为1~1.20㎡。</li>
+                                </ol>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.4.6条</h4>
+                                <p>卫生管理设施间</p>
+                                <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                    <li>六层及六层以上办公建筑宜设垃圾管道。高层办公建筑设置垃圾管道时，应设前室，前室门应采用乙级防火门。</li>
+                                    <li>不设垃圾管道的高层办公建筑，每层应设专用垃圾收集存放间。
+                                        <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                            <li>垃圾收集存放间应有不向邻室对流的自然通风或机械排风。</li>
+                                            <li>垃圾收集存放间应靠近电梯间，宜有专用通道运出垃圾。</li>
+                                            <li>宜在底层设垃圾集中存放处，存放处应设冲洗排污设施，并有运出垃圾的专用通道。</li>
+                                        </ol>
+                                    </li>
+                                    <li>每层应设清扫工具存放室和清洗水池。</li>
+                                </ol>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第3.4.7条</h4>
+                                <p>技术性服务用房</p>
+                                <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                    <li>电话总机房，计算机房，电传室，大型复印机室，晒图室和设备机房应根据选用机型和工艺要求进行建筑平面和相应的室内环境设计。</li>
+                                    <li>微型计算机与大型计算机的终端、小型文字处理机、台式复印机以及碎纸机等办公自动化设施可设置在办公室内。</li>
+                                    <li>设有办公自动化设施的办公室，需于室内暗敷电缆线路的，应在办公室的顶棚、墙面或楼地面构造设计中综合考虑。</li>
+                                    <li>供设计部门使用的晒图室，一般由收发间、裁纸间、晒图机房、装订间、底图库、晒图纸库、废纸库等组成。晒图室宜布置在底层，采用氨气熏图的晒图机房应设废气排放装置和处理设施。</li>
+                                </ol>
+                                <p class="mt-2 text-sm text-gray-600">注:底图库设计应符合第3.4.3条第二款的规定。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第四章 建筑设备 -->
+            <section id="chapter4" class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 chapter-title">第四章 建筑设备</h2>
+                
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">第一节 给水排水</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第4.1.1条</h4>
+                                <p>生活用水的水质应符合现行的《生活饮用水标准》的要求。生活、消防合用的地下水池和高位水箱应有防止水质变坏的措施。水池的泄水、溢流管不得与污废水系统直接连接，应采取间接排水的方式。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第4.1.2条</h4>
+                                <p>办公建筑应保证有足够的水量、水压。生活用水量标准为30~50L/人班，小时变化系数2.5~2.0。卫生器具给水配件处静水压宜控制在350~450Kpa。蓄水池的消防贮备量应按现行防火规范及当地消防、市政部门的要求执行。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第4.1.3条</h4>
+                                <p>根据办公人员的生活习惯及当地气候条件供应开水、温饮水或冷饮水。饮水量标准为1~2L/人班，小时变化系数1.5制备开水的热源应采用蒸汽加热或燃气加热；如需用电力作为开水器的热源，应取得当地供电部门的同意。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第4.1.4条</h4>
+                                <p>经常运行的水泵不宜与办公用房毗邻，泵房内应考虑消声和减振措施。高层办公建筑给水加压泵及消防给水泵的扬水管应有防水锤措施。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第4.1.5条</h4>
+                                <p>排放有腐蚀性废水的管道应采用耐腐管材，并不得与生活污废水系统合流。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第4.1.6条</h4>
+                                <p>高层、超高层办公建筑设有给排水、热力、空调管道的技术设备层和敞开式避难层，应设地面泄水装置。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第4.1.7条</h4>
+                                <p>多层、高层和超高层办公建筑的地下室及电梯井底等处应设消防排水设施。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 第二节 暖通空调 -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">第二节 暖通空调</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第4.2.1条</h4>
+                                <p>采暖通风和空气调节设计除应按现行的《采暖通风和空气调节设计规范》执行外尚应符合本规范的规定。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第4.2.2条</h4>
+                                <p>设置空气调节及集中采暖的办公建筑，室内温度、湿度的设计参数及允许噪声可参照表4.2.2的规定选取。</p>
+                                
+                                <div class="mt-4 overflow-x-auto">
+                                    <table>
+                                        <caption class="text-left font-medium mb-2">表4.2.2 室内温度、湿度的设计参数及允许噪声</caption>
+                                        <thead>
+                                            <tr>
+                                                <th>房间名称</th>
+                                                <th colspan="2">夏季</th>
+                                                <th colspan="2">冬季</th>
+                                                <th>噪声标准声级方(A)</th>
+                                                <th>NC数</th>
+                                            </tr>
+                                            <tr>
+                                                <th></th>
+                                                <th>温度°C</th>
+                                                <th>相对湿度</th>
+                                                <th>温度°C</th>
+                                                <th>相对湿度</th>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>一般办公室</td>
+                                                <td>26~28</td>
+                                                <td>&lt;65%</td>
+                                                <td>18~20</td>
+                                                <td>不规定</td>
+                                                <td>40~55</td>
+                                                <td>40~50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>高级办公室</td>
+                                                <td>24~27</td>
+                                                <td>&lt;60%</td>
+                                                <td>20~22</td>
+                                                <td>≥3.5%</td>
+                                                <td>30~40</td>
+                                                <td>25~35</td>
+                                            </tr>
+                                            <tr>
+                                                <td>会议室接待室</td>
+                                                <td>25~27</td>
+                                                <td>&lt;65%</td>
+                                                <td>16~18</td>
+                                                <td>不规定</td>
+                                                <td>40~50</td>
+                                                <td>35~45</td>
+                                            </tr>
+                                            <tr>
+                                                <td>电话总机房</td>
+                                                <td>25~27</td>
+                                                <td>&lt;65%</td>
+                                                <td>16~18</td>
+                                                <td>不规定</td>
+                                                <td>55~60</td>
+                                                <td>50~55</td>
+                                            </tr>
+                                            <tr>
+                                                <td>计算机房</td>
+                                                <td>24~28</td>
+                                                <td>≤60%</td>
+                                                <td>18~20</td>
+                                                <td>不规定</td>
+                                                <td>55~65</td>
+                                                <td>50~60</td>
+                                            </tr>
+                                            <tr>
+                                                <td>复印机房</td>
+                                                <td>24~28</td>
+                                                <td>&lt;55%</td>
+                                                <td>18~20</td>
+                                                <td>不规定</td>
+                                                <td>55~60</td>
+                                                <td>50~55</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p class="mt-2 text-sm text-gray-600">注:大型电话总机房、计算机房应按设备要求设计。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第4.2.3条</h4>
+                                <p>办公室每人新鲜空气供给量按下值采用。</p>
+                                <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                    <li>一般办公室:20~30 /h·人;</li>
+                                    <li>高级办公室:30~50 /h·人。</li>
+                                </ol>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第4.2.4条</h4>
+                                <p>空调系统分区划分应符合下列要求:</p>
+                                <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                    <li>采暖、空调系统应根据房间用途、标准高低、负荷变化以及使用时间等的特点划分。</li>
+                                    <li>可划分内部区及周边区平面的办公建筑，应针对各区负荷特点分设系统，空调宜采用空气--水系统或变风量系统。</li>
+                                    <li>在全年使用空调的特殊房间，如计算机房、自动电话间、大楼自控中心(含消防控制中心)等，应设独立空调系统。</li>
+                                    <li>超高层办公建筑的设备层设在避难层时，且空调系统按垂直方向分区的，设备层应作为分区的依据。</li>
+                                </ol>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第4.2.5条</h4>
+                                <p>吸烟多的公共用房，宜设置排风设施，排风量不大于新风量的80%;卫生间、开水间及设备机房的换气量应符合表4.2.5的规定。</p>
+                                
+                                <div class="mt-4 overflow-x-auto">
+                                    <table>
+                                        <caption class="text-left font-medium mb-2">表4.2.5 卫生间、开水间及设备机房每小时换气次数</caption>
+                                        <thead>
+                                            <tr>
+                                                <th>房间名称</th>
+                                                <th>换气次数</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>卫生间</td>
+                                                <td>10~15次</td>
+                                            </tr>
+                                            <tr>
+                                                <td>开水间</td>
+                                                <td>5~10次</td>
+                                            </tr>
+                                            <tr>
+                                                <td>蓄电池室</td>
+                                                <td>6~10次</td>
+                                            </tr>
+                                            <tr>
+                                                <td>电梯机房</td>
+                                                <td>8~15次</td>
+                                            </tr>
+                                            <tr>
+                                                <td>冷冻机房</td>
+                                                <td>40~60次</td>
+                                            </tr>
+                                            <tr>
+                                                <td>厨房(大)</td>
+                                                <td>30~40次</td>
+                                            </tr>
+                                            <tr>
+                                                <td>厨房(小)</td>
+                                                <td>4~6次</td>
+                                            </tr>
+                                            <tr>
+                                                <td>变电所</td>
+                                                <td>8~15次</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p class="mt-2 text-sm text-gray-600">注:房间容积为一次换气量，表中卫生间、蓄电池室、厨房应保持负压。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第4.2.6条</h4>
+                                <p>空调系统宜设温控装置。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第4.2.7条</h4>
+                                <p>对通风机、水泵、制冷压缩机等产生振动的设备应采取减振措施。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 第三节 电气 -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">第三节 电气</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第4.3.1条</h4>
+                                <p>办公建筑负荷等级应符合下列规定:</p>
+                                <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                    <li>重要办公建筑和建筑高度超过50m的高层办公建筑的重要设备及部位按一级负荷供电。</li>
+                                    <li>建筑高度不超过50m的高层办公建筑和部、省级行政办公建筑的重要设备和部位按二级负荷供电。</li>
+                                    <li>除一、二级负荷以外的用电设备及部位，均按三级负荷供电。</li>
+                                </ol>
+                                <p class="mt-2 text-sm text-gray-600">注:重要设备及部位系指办公室、会议室、总值班室、主要通道的一般照明，各种场所事故照明、消防电梯、防烟及排烟设施、紧急广播、消防水泵、火灾自动报警、自动灭火装置等消防的电力设施，以及电话总机房、计算机房、变配电所、柴油发电机房等部位。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第4.3.2条</h4>
+                                <p>电源进线应设置切断装置和计费装置，高层和重要办公建筑宜设变配电所。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第4.3.3条</h4>
+                                <p>每层一般应设配电设备，高层办公建筑宜在每层设配电间，配电间可附设在电缆竖井旁和电缆竖井内。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第4.3.4条</h4>
+                                <p>电气管线宜暗敷，管材应采用非燃烧材料。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第4.3.5条</h4>
+                                <p>各种用房人工照明的照度标准值应符合表4.3.5的规定。</p>
+                                
+                                <div class="mt-4 overflow-x-auto">
+                                    <table>
+                                        <caption class="text-left font-medium mb-2">表4.3.5 照度标准度</caption>
+                                        <thead>
+                                            <tr>
+                                                <th>房间名称</th>
+                                                <th>照度标准值(Lx)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>办公室、研究工作室、会议室、接待室、陈列室</td>
+                                                <td>100~200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>设计室、绘图室、打字室</td>
+                                                <td>200~500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>图书阅览室</td>
+                                                <td>100~200</td>
+                                            </tr>
+                                            <tr>
+                                                <td>档案室、资料室等</td>
+                                                <td>75~150</td>
+                                            </tr>
+                                            <tr>
+                                                <td>计算机房</td>
+                                                <td>150~300</td>
+                                            </tr>
+                                            <tr>
+                                                <td>电梯间、门厅</td>
+                                                <td>75~150</td>
+                                            </tr>
+                                            <tr>
+                                                <td>电话总机房、晒图室、复印室</td>
+                                                <td>30~50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>走道、厕所</td>
+                                                <td>15~30</td>
+                                            </tr>
+                                            <tr>
+                                                <td>开水间、楼梯间、贮藏室</td>
+                                                <td>20~50</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第4.3.6条</h4>
+                                <p>办公室的照明宜采用荧光灯、门厅、接待室、陈列室等房间也可根据建筑装修的需要安装饰灯。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第4.3.7条</h4>
+                                <p>办公室每个标准开间内宜设置2~3个插座，插座回路宜与照明回路分开。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第4.3.8条</h4>
+                                <p>重要办公建筑、部(省)级行政办公建筑和建筑高度超过50m的高层办公建筑应为二类防雷建筑；此外需有防雷措施的办公建筑为三类防雷建筑。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第4.3.9条</h4>
+                                <p>办公建筑宜设电话总机，总机容量的确定应符合现行的《邮电通讯设计规范》的规定。</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2">第4.3.10条</h4>
+                                <p>办公建筑的火灾自动报警、自动灭火、火灾事故照明、疏散指示标志，消防用电设备等电源与回路和消防控制室的设计应符合现行的防火规范的规定。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 附录 -->
+            <section id="appendix" class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 chapter-title">附加说明</h2>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">本规范主编单位和主要起草人名单</h3>
+                        <p class="mb-2">主编单位:浙江省建筑设计院:</p>
+                        <p>主要起草人:陈炳楠 耿复 沈介骏 张建良 蒋葆华 薛荣元 赵卫泽</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">附录一 名词解释</h3>
+                        
+                        <div class="overflow-x-auto">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>名词</th>
+                                        <th>解释</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1办公建筑:</td>
+                                        <td>供机关、团体和企事业单位办理行政事务和从事业务活动的建筑物</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2单间式办公室</td>
+                                        <td>指以一个开间(亦可以二开间或三开间)和进深为尺度而隔成单间的办公室，一般为双面布房或单面布房形式</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3大空间式办公室</td>
+                                        <td>指以一个开间(亦可以二开间或三开间)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">附录二 本规范用词说明</h3>
+                        
+                        <div class="space-y-4">
+                            <p>2 表示严格，在正常情况下均应这样作的用词:</p>
+                            <p>正面词采用"应";</p>
+                            <p>反面词采用"不应"或"不得"。</p>
+                            
+                            <p>3 表示允许稍有选择，在条件许可时首先应这样作的词:</p>
+                            <p>正面词采用"宜"或"可";</p>
+                            <p>反面词采用"不宜"。</p>
+                            
+                            <p>二、条文中指明必须按其他有关标准、规范执行的写法为"应按……执行"或"应符合……要求或规定"。非必须按所指定的标准和规范执行的写法为"可参照……执行"。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- 页脚 -->
+        <footer class="text-center py-6 text-gray-500 text-sm">
+            <p>created by <a href="https://space.coze.cn" class="text-indigo-500 hover:text-indigo-700">coze space</a></p>
+            <p class="mt-1">页面内容均由 AI 生成，仅供参考</p>
+        </footer>
+    </div>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('mobileMenuButton').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // 如果是移动端菜单，点击后关闭菜单
+                    if (window.innerWidth < 768) {
+                        document.getElementById('mobileMenu').classList.remove('active');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
