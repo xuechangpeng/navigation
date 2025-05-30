@@ -9,26 +9,6 @@ form#search {
   border-radius: 25px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
-.search-container {
-  background: #fff0f6;
-  /* 奶油粉背景 */
-  padding: 30px 40px;
-  border-radius: 25px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  max-width: 400px;
-  width: 100%;
-  border: 2px solid #ffb6c1;
-}
-
-h2 {
-  color: #ff69b4;
-  margin-bottom: 20px;
-}
-
-/* input[type="text"]::before {
-    background-image: url(24-24x2.png);
-  } */
 input[type="text"] {
   width: 100%;
   padding: 12px 20px;
