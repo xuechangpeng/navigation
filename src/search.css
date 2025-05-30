@@ -3,7 +3,7 @@ form#search {
   align-items: center;
   justify-content: center;
   width: 40%;
-  height: 4%;
+  height: 6%;
   position: fixed;
   top: 0px; /* 距离顶部的距离 */
   left: 50%; /* 左边距设置为50% */
@@ -26,7 +26,7 @@ input[type="text"] {
   outline: none;
   transition: all 0.3s ease;
   box-sizing: border-box;
-  background: #fff url('24-24x2.png') no-repeat right center;
+  background: #fff url('/assets/images/24-24x2.png') no-repeat right center;
   background-size: 50px;
 }
 
@@ -47,7 +47,7 @@ button {
   background-color: #ff99c2;
   color: white;
   border: none;
-  padding: 12px 5px;
+  padding: 5px 5px;
   font-size: 16px;
   border-radius: 30px;
   cursor: pointer;
