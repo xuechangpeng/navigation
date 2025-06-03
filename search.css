@@ -60,3 +60,86 @@ form#search button:hover {
   background-color: #ff66a3;
   transform: scale(1.05);
 }
+main#policy {
+  width: 100px;
+  height: calc(100%-1.25rem);
+  border: 2px solid #99b9ff;
+  border-radius: 0.5rem;
+  text-align: center;
+  background: #c8f8f6;
+  position: fixed;
+  bottom: 1.25rem;
+  left: 0rem;
+
+  
+}
+main#policy .dropdown:hover {
+  width: 25%;
+  height: calc(100%-1.25rem);
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: fixed;
+  bottom: 1.25rem;
+  left: 0rem;
+  z-index: 1000;
+}
+main#policy .dropdown:hover p {
+  display: none;
+}
+main#policy .dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+main#policy .dropdown-content {
+  display: none;
+}
+main#policy .dropdown-content a {
+  flex: 0.6rem 1;
+  background: #c8f8f6;
+  border: 2px solid #99b9ff;
+  border-radius: 1.25rem;
+  transform: translateX(-100%); /* 初始位置：完全向左隐藏 */
+  opacity: 0; /* 初始透明度为0 */
+}
+main#policy .dropdown-content a::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(/upload/image/1749088300307.jpg) no-repeat left center;
+  background-size: cover;
+  margin-right: 0.02rem;
+}
+
+main#policy .dropdown-content a:link {
+  color: #000000;
+} 
+main#policy .dropdown-content a:visited {
+  color: #99b9ff;
+} 
+main#policy .dropdown-content a:focus,
+main#policy .dropdown-content a:hover {
+  color: #f50222;
+  border-bottom: 1px dashed #f50222;
+} 
+main#policy .dropdown-content a:active {
+  color: #99b9ff;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 为每个 <a> 元素设置动画延迟 */
+.dropdown-content a:nth-child(1) { animation: slideIn 0.5s ease-out 0.1s forwards; }
+.dropdown-content a:nth-child(2) { animation: slideIn 0.5s ease-out 0.3s forwards; }
+.dropdown-content a:nth-child(3) { animation: slideIn 0.5s ease-out 0.5s forwards; }
+.dropdown-content a:nth-child(4) { animation: slideIn 0.5s ease-out 0.7s forwards; }
