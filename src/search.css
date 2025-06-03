@@ -2,7 +2,7 @@ form#search {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40%;
+  width: 60%;
   height: 6%;
   position: fixed;
   top: 0px; /* 距离顶部的距离 */
@@ -26,7 +26,7 @@ input[type="text"] {
   outline: none;
   transition: all 0.3s ease;
   box-sizing: border-box;
-  background: #fff url('/assets/images/24-24x2.png') no-repeat right center;
+  background: #fff url('./assets/images/24-24x2.png') no-repeat right center;
   background-size: 50px;
 }
 
@@ -42,8 +42,9 @@ input[type="hidden"] {
 button {
   flex: 100px 1;
   width: 50%;
-  height: 100%;
+  height: 80%;
   margin-left: 5px;
+  margin-right: 5px;
   background-color: #ff99c2;
   color: white;
   border: none;

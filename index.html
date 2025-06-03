@@ -465,34 +465,80 @@
                         </div>
                     </a>
                     <div class="top_main">
-                        <form id="search" action="https://cn.bing.com/search" method="get" target="_blank" >
-                            <!-- 文本输入框 -->
-                            <input id="searchInput" type="text" name="q" placeholder="开始赚积分"   required >
-                            <input type="hidden" name="form" value="TSASDS">
+                        <form id="search" action="https://cn.bing.com/search" method="get" target="_blank">
+                            <button onclick="window.open('https://rewards.bing.com/','_blank')">Edge</button>
+                            <button type="submit" type="button" onclick="setRandom()">study</button>
+                            <input type="text" id="searchInput" name="q" placeholder="开始赚积分"  required>
+                            <input type="hidden" name="form"  value="TSASDS">
                             <button type="submit">走你</button>
                             <button type="button" onclick="openWithQuery()">Bilibili</button>
-                            <button onclick="window.open('https://rewards.bing.com/','_blank')">Edge</button>
-                            
                           </form>
-                          <script>
+                        <script>
                             function openWithQuery() {
-                              // 获取输入框的值
-                              var query = document.getElementById("searchInput").value;
-                          
-                              // 对查询参数进行URL编码
-                              var encodedQuery = encodeURIComponent(query);
-                          
-                              // 构造带参数的URL
-                              var url = "https://search.bilibili.com/all?keyword=" + encodedQuery;
-                          
-                              // 打开新窗口
-                              window.open(url, '_blank');
+                                // 获取输入框的值
+                                var query = document.getElementById("searchInput").value;
+
+                                // 对查询参数进行URL编码
+                                var encodedQuery = encodeURIComponent(query);
+
+                                // 构造带参数的URL
+                                var url = "https://search.bilibili.com/all?keyword=" + encodedQuery;
+
+                                // 打开新窗口
+                                window.open(url, '_blank');
                             }
-                          </script>
+                        </script>
+                        <script>
+                        async function getRandomWordOrChineseChar() {
+                        const isChinese = Math.random() < 0.2; // 中文和英文各占 50%
+                      
+                        if (isChinese) {
+                          // 生成一个汉字
+                          const minCharCode = 0x4e00;
+                          const maxCharCode = 0x9fa5;
+                          const charCode = Math.floor(Math.random() * (maxCharCode - minCharCode + 1)) + minCharCode;
+                          return String.fromCharCode(charCode);
+                        } else {
+                          // 获取一个英文单词（使用更稳定的 API）
+                          try {
+                            const response = await fetch('./src/words.json');
+                            if (!response.ok) throw new Error('网络响应失败');
+                            const data = await response.json();
+                            const words = data.data;
+                            return words[Math.floor(Math.random() * words.length)];
+                          } catch (error) {
+                            console.error("获取英文单词失败", error);
+                            return "fallback"; // 备用词
+                          }
+                        }
+                      }
+                      
+                      let placeholders = []; // 初始化为空数组
+                      
+                      async function setRandom() {
+                          // 每次点击按钮时生成新的随机英文单词
+                          const newWord = await getRandomWordOrChineseChar();
+                          
+                          // 更新 placeholders 数组（如果需要）
+                          placeholders = [newWord];
+                          
+                          const input = document.getElementById("searchInput");
+                          const form = document.getElementById("search");
+                      
+                          // 设置 placeholder 和输入框的值
+                          input.placeholder = newWord;
+                          input.value = newWord;
+                      
+                          // 提交表单进行搜索
+                         
+                          form.submit();
+                       
+                      }
+                        </script>
 
                         <div class="kongjian">
-                            <div class="feiji" target="_blank" href="https://www.mihoyogift.com/"><a class="feiji_link" 
-                                style="display: none">自定义个人导航</a>
+                            <div class="feiji" target="_blank" href="https://www.mihoyogift.com/"><a class="feiji_link"
+                                    style="display: none">自定义个人导航</a>
                             </div>
                             <div class="chilun">
                                 <div class="chilunicon" title="Goto-Mars用户设置"></div>
@@ -2659,95 +2705,95 @@
         </div>
     </div>
     <script>if (!Array.prototype.findIndex) {
-            Object.defineProperty(Array.prototype, "findIndex", {
-                value: function (predicate) {
-                    if (this === null) {
-                        throw new TypeError('Array.prototype.find called on null or undefined');
-                    }
-                    if (typeof predicate !== 'function') {
-                        throw new TypeError('predicate must be a function');
-                    }
-                    var list = Object(this);
-                    var length = list.length >>> 0;
-                    var thisArg = arguments[1];
-                    var value;
+          Object.defineProperty(Array.prototype, "findIndex", {
+              value: function (predicate) {
+                  if (this === null) {
+                      throw new TypeError('Array.prototype.find called on null or undefined');
+                  }
+                  if (typeof predicate !== 'function') {
+                      throw new TypeError('predicate must be a function');
+                  }
+                  var list = Object(this);
+                  var length = list.length >>> 0;
+                  var thisArg = arguments[1];
+                  var value;
 
-                    for (var i = 0; i < length; i++) {
-                        value = list[i];
-                        if (predicate.call(thisArg, value, i, list)) {
-                            return value;
-                        }
-                    }
-                    return undefined;
-                }
-            });
-        }
-        if (!Array.prototype.fill) {
-            Object.defineProperty(Array.prototype, 'fill', {
-                value: function (value) {
-                    if (this == null) {
-                        throw new TypeError('this is null or not defined');
-                    }
-                    var O = Object(this);
-                    var len = O.length >>> 0;
-                    var start = arguments[1];
-                    var relativeStart = start >> 0;
-                    var k = relativeStart < 0 ?
-                        Math.max(len + relativeStart, 0) :
-                        Math.min(relativeStart, len);
-                    var end = arguments[2];
-                    var relativeEnd = end === undefined ?
-                        len : end >> 0;
-                    var final = relativeEnd < 0 ?
-                        Math.max(len + relativeEnd, 0) :
-                        Math.min(relativeEnd, len);
-                    while (k < final) {
-                        O[k] = value;
-                        k++;
-                    }
-                    return O;
-                }
-            });
-        }
-        Object.defineProperty(Array.prototype, 'has', {
-            value: function (value) {
-                var _list = Object(this);
-                var _length = _list.length >>> 0;
-                for (var i = 0; i < _length; i++) {
-                    if (_list[i] == value) return i
-                }
-                return -1
-            }
-        });
-        Date.prototype.format = function (format) {
-            if (!format) format = 'yyyy-MM-dd';
-            var o = {
-                'M+': this.getMonth() + 1,
-                'd+': this.getDate(),
-                'h+': this.getHours(),
-                'm+': this.getMinutes(),
-                's+': this.getSeconds(),
-                'q+': Math.floor((this.getMonth() + 3) / 3),
-                'S': this.getMilliseconds()
-            };
-            if (/(y+)/.test(format)) format = format.replace(RegExp.$1, (this.getFullYear() + '').substr(4 - RegExp.$1.length));
-            for (var k in o) {
-                if (new RegExp('(' + k + ')').test(format)) format = format.replace(RegExp.$1, (RegExp.$1.length === 1) ? (o[k]) : (('00' + o[k]).substr(('' + o[k]).length)))
-            }
-            return format
-        };
-        Date.prototype.getRoughTime = function () {
-            return Math.ceil(this.getTime() / 1000)
-        };
-        Date.prototype.getDayTime = function () {
-            return Math.ceil(new Date(this.format()).getTime() / 1000)
-        };
-        Date.nowTime = function () {
-            return Math.ceil(Date.now() / 1000)
-        };
-        Date.todayTime = function () {
-            return Math.ceil(new Date(new Date().format()).getTime() / 1000)
-        }</script>
+                  for (var i = 0; i < length; i++) {
+                      value = list[i];
+                      if (predicate.call(thisArg, value, i, list)) {
+                          return value;
+                      }
+                  }
+                  return undefined;
+              }
+          });
+      }
+      if (!Array.prototype.fill) {
+          Object.defineProperty(Array.prototype, 'fill', {
+              value: function (value) {
+                  if (this == null) {
+                      throw new TypeError('this is null or not defined');
+                  }
+                  var O = Object(this);
+                  var len = O.length >>> 0;
+                  var start = arguments[1];
+                  var relativeStart = start >> 0;
+                  var k = relativeStart < 0 ?
+                      Math.max(len + relativeStart, 0) :
+                      Math.min(relativeStart, len);
+                  var end = arguments[2];
+                  var relativeEnd = end === undefined ?
+                      len : end >> 0;
+                  var final = relativeEnd < 0 ?
+                      Math.max(len + relativeEnd, 0) :
+                      Math.min(relativeEnd, len);
+                  while (k < final) {
+                      O[k] = value;
+                      k++;
+                  }
+                  return O;
+              }
+          });
+      }
+      Object.defineProperty(Array.prototype, 'has', {
+          value: function (value) {
+              var _list = Object(this);
+              var _length = _list.length >>> 0;
+              for (var i = 0; i < _length; i++) {
+                  if (_list[i] == value) return i
+              }
+              return -1
+          }
+      });
+      Date.prototype.format = function (format) {
+          if (!format) format = 'yyyy-MM-dd';
+          var o = {
+              'M+': this.getMonth() + 1,
+              'd+': this.getDate(),
+              'h+': this.getHours(),
+              'm+': this.getMinutes(),
+              's+': this.getSeconds(),
+              'q+': Math.floor((this.getMonth() + 3) / 3),
+              'S': this.getMilliseconds()
+          };
+          if (/(y+)/.test(format)) format = format.replace(RegExp.$1, (this.getFullYear() + '').substr(4 - RegExp.$1.length));
+          for (var k in o) {
+              if (new RegExp('(' + k + ')').test(format)) format = format.replace(RegExp.$1, (RegExp.$1.length === 1) ? (o[k]) : (('00' + o[k]).substr(('' + o[k]).length)))
+          }
+          return format
+      };
+      Date.prototype.getRoughTime = function () {
+          return Math.ceil(this.getTime() / 1000)
+      };
+      Date.prototype.getDayTime = function () {
+          return Math.ceil(new Date(this.format()).getTime() / 1000)
+      };
+      Date.nowTime = function () {
+          return Math.ceil(Date.now() / 1000)
+      };
+      Date.todayTime = function () {
+          return Math.ceil(new Date(new Date().format()).getTime() / 1000)
+      }</script>
     <script type="text/javascript" src="/lib_516e49231202d2e735b0.js"></script>
     <script type="text/javascript" src="./src/app.9daf10a7f352c754adf0.js"></script>
     <script type="text/javascript" src="./src/gototop.js"></script>
