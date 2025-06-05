@@ -69,10 +69,12 @@ main#policy {
   background: #c8f8f6;
   position: fixed;
   bottom: 1.25rem;
-  left: 0rem;
-
-  
+  left: -1.5rem;
 }
+main#policy:hover {
+  left: 0rem;
+}
+
 main#policy .dropdown:hover {
   width: 25%;
   height: calc(100%-1.25rem);
@@ -83,9 +85,7 @@ main#policy .dropdown:hover {
   left: 0rem;
   z-index: 1000;
 }
-main#policy .dropdown:hover p {
-  display: none;
-}
+
 main#policy .dropdown:hover .dropdown-content {
   display: flex;
   flex-direction: column;
@@ -125,6 +125,102 @@ main#policy .dropdown-content a:hover {
   border-bottom: 1px dashed #f50222;
 } 
 main#policy .dropdown-content a:active {
+  color: #99b9ff;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 为每个 <a> 元素设置动画延迟 */
+.dropdown-content a:nth-child(1) { animation: slideIn 0.5s ease-out 0.1s forwards; }
+.dropdown-content a:nth-child(2) { animation: slideIn 0.5s ease-out 0.3s forwards; }
+.dropdown-content a:nth-child(3) { animation: slideIn 0.5s ease-out 0.5s forwards; }
+.dropdown-content a:nth-child(4) { animation: slideIn 0.5s ease-out 0.7s forwards; }
+
+main#case {
+  width: 100px;
+  height: calc(100%-1.25rem);
+  border: 2px solid #99b9ff;
+  border-radius: 0.5rem;
+  text-align: center;
+  background: #c8f8f6;
+  position: fixed;
+  bottom: 2.5rem;
+  left: -2rem;
+}
+main#case p {
+  position: relative;
+  display: inline-block;
+}
+main#case p::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  position: absolute;
+  right: -60px;
+  top: 0;
+  background: url(/assets/images/e5f808901fa8758d457147f1a51c8527_1057771890893641393.png) center center/100% 100%  no-repeat ;
+}
+main#case:hover {
+  left: 0rem;
+}
+main#case .dropdown:hover {
+  width: 25%;
+  height: calc(100%-1.25rem);
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: fixed;
+  bottom: 2.5rem;
+  left: 0rem;
+  z-index: 1000;
+}
+main#case .dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+main#case .dropdown-content {
+  display: none;
+}
+main#case .dropdown-content a {
+  flex: 0.6rem 1;
+  background: #c8f8f6;
+  border: 2px solid #99b9ff;
+  border-radius: 1.25rem;
+  transform: translateX(-100%); /* 初始位置：完全向左隐藏 */
+  opacity: 0; /* 初始透明度为0 */
+}
+main#case .dropdown-content a::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(/assets/images/b63cfe9d128ab1230eb6d72f90922564_3627164148917005278.gif) no-repeat left center;
+  background-size: cover;
+  margin-right: 0.02rem;
+}
+
+main#case .dropdown-content a:link {
+  color: #000000;
+} 
+main#case .dropdown-content a:visited {
+  color: #99b9ff;
+} 
+main#case .dropdown-content a:focus,
+main#case .dropdown-content a:hover {
+  color: #f50222;
+  border-bottom: 1px dashed #f50222;
+} 
+main#case .dropdown-content a:active {
   color: #99b9ff;
 }
 @keyframes slideIn {
