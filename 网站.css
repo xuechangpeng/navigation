@@ -5966,7 +5966,7 @@ ul {
 }
 
 .page.gray #header .logo .logo-img {
-    background: url(./assets/images/0992e2359e132707e4b61812d8066c25_2052201000163681033.png) no-repeat 100%;
+    background: url(./assets/images/米游姬.png) no-repeat 100%;
     background-size: 2.5rem 1.5rem
 }
 
@@ -5988,7 +5988,7 @@ ul {
 #header .logo .logo-img {
     width: 100%;
     height: 100%;
-    background: url(./assets/images/0992e2359e132707e4b61812d8066c25_2052201000163681033.png) no-repeat 50%;
+    background: url(./assets/images/米游姬.png) no-repeat 50%;
     background-size: 3.52rem 0.84rem
 }
 
@@ -6033,7 +6033,7 @@ ul {
 #header .fankuiicon {
     height: 0.72rem;
     width: 0.72rem;
-    background: url(./assets/images/kongjian_03.png) no-repeat 50%;
+    background: url(./assets/images/米游铺.png) no-repeat 50%;
     background-size: contain
 }
 
@@ -6059,7 +6059,7 @@ ul {
 #header .feiji {
     height: 0.72rem;
     width: 0.72rem;
-    background: url(./assets/images/kongjian_03.png) no-repeat 50%;
+    background: url(./assets/images/米游铺.png) no-repeat 50%;
     background-size: 0.6rem 0.6rem;
     position: relative;
     float: left;
@@ -6069,7 +6069,7 @@ ul {
 #header .feiji.active,
 #header .feiji:hover {
     cursor: pointer;
-    background-image: url(./assets/images/kongjian_05.png)
+    background-image: url(./assets/images/菲林.gif)
 }
 
 #header .feiji .feiji_link {
@@ -6129,22 +6129,25 @@ ul {
 #header .chilun a {
     cursor: pointer
 }
-
+#header .chilun a:hover {
+    color: darksalmon;
+}
 #header .chilun:hover .chilunicon {
-    background: url(./assets/images/kongjian_11.png) no-repeat 50%;
+    background: url(./assets/images/菲林.gif) no-repeat 50%;
     background-size: contain
 }
 
 #header .chilun:hover .chiluntanchu {
-    display: block
+    display: block ;
+    opacity: 1;
 }
 
 #header .chilunicon {
     display: inline-block;
     width: 0.72rem;
     height: 0.72rem;
-    background: url(./assets/images/kongjian_07.png) no-repeat 50%;
-    background-size: cover
+    background: url(./assets/images/电玩城.gif) no-repeat 50%;
+    background-size: 80% auto
 }
 
 #header .chiluntanchu {
@@ -6160,7 +6163,9 @@ ul {
     border: 0.02rem solid #e2e2e2;
     border-radius: 0.12rem;
     box-shadow: 0.02rem 0.02rem 0.06rem #ddd;
-    line-height: 0.56rem
+    line-height: 0.56rem;
+    opacity: 0;
+    transition: opacity 1s ease;
 }
 
 #header .tanchuang3j {
