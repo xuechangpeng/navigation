@@ -177,7 +177,12 @@ main#case .dropdown-content a:nth-child(4),
 main#case .dropdown-content a:nth-child(5),
 main#case .dropdown-content a:nth-child(6),
 main#case .dropdown-content a:nth-child(7),
-main#case .dropdown-content a:nth-child(8) {
+main#case .dropdown-content a:nth-child(8),
+main#case .dropdown-content a:nth-child(9),
+main#case .dropdown-content a:nth-child(10),
+main#case .dropdown-content a:nth-child(11),
+main#case .dropdown-content a:nth-child(12)
+{
   animation-name: slideIn;
   animation-duration: 0.5s;
   animation-timing-function: ease-out;
